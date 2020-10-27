@@ -8,18 +8,29 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Buscaminas{
-	public static int [][] creaTablero(int x, int y) {
-		int tablero [][]= new int[x][y];
-		return tablero;
+	public static boolean coorvalidas(int x, int y, int minas, int intentos) {
+		boolean valid=false;
+		if (minas < x*y &&intentos < x+y) {
+			valid=true;
+		}
+		return valid;
 		
 	}
 	public static void main(String[] args){
-		
 		Scanner leer = new Scanner (System.in);
-		int horizontal= leer.nextInt();
-		int vertical= leer.nextInt();
+		int horizontal=0;
 				
-		int tablero [][]=creaTablero(horizontal,vertical);
+		int vertical=0;
+		int intentos=0;
+		int minas=0;
+		do {
+			
+			horizontal= leer.nextInt();
+			vertical= leer.nextInt();
+			
+		}while(coorvalidas(horizontal,vertical,intentos, minas));
+		
+		int tablero [][]= new int[horizontal][vertical];
 		
 		double w=0;
   		double z=0;
@@ -28,31 +39,26 @@ public class Buscaminas{
 		
 		int intento=75;
 		
-		int tminas=10;
+		int tminas=2;
 		
 		for(int j=0;j<horizontal;j++)
 			for (int i=0;i<vertical;i++)
 				tablero [j][i]=0;
 		
 		do  {  
-     			w=Math.random()*20;
-        		z=Math.random()*20;  
+     			w=Math.random()*horizontal;
+        		z=Math.random()*vertical;  
            		w=(int)w;
            		z=(int)z;
-           		if  (z!=0 && w!=0 && z!=20-1 && w!=20-1){
+           		if  (z!=0 && w!=0 && z!=horizontal-1 && w!=vertical-1){
              	tablero[(int)w][(int) z ]=1;
               	ntminas++;
            			}
        		}while (ntminas<=10);
        
-       
- 	   // for(int xx=0;xx<20;xx++)
-	   //	for (int yy=0;yy<20;yy++)
-	   //     if(tablero [xx][yy]==1)
-	   //     System.out.println("Fila   "+(xx+1)+"     columna "+(yy+1)); 
-      
+     
        	System.out.println("\n-x----------------------------------------------------x-");
-       	System.out.println("  Ingresa las coordenas en el rango del 1 al 20");
+       	System.out.println("  Ingresa las coordenas entre "+horizontal+ " y "+ vertical);
        	do {
        		int x=0,y=0;
        		int nminas = 0;
@@ -66,9 +72,9 @@ public class Buscaminas{
        			 System.out.print("		Columna:  ");
        			 y=leer.nextInt();
        			 
-       			 if(x==0 || y==0 || x>20 || y>20)
+       			 if(x==0 || y==0 || x>horizontal || y>vertical)
        			 	System.out.println("\n	==>Coordenadas incorrectas<== \n");
-       		}while (x==0 || y==0 || x>20 || y>20);
+       		}while (x==0 || y==0 || x>horizontal || y>vertical);
        		
        		x=x-1;
        		y=y-1;
@@ -76,45 +82,45 @@ public class Buscaminas{
        		if(tablero [x][y]==0){
        			
        			if (x==0&&y==0){
-       				if(x+1>=0 && x+1<20 && y<20)
+       				if(x+1>=0 && x+1<horizontal && y<vertical)
        					nminas=nminas+tablero [x+1][y];
-       				if(x+1>=0 && x+1<20 && y+1<20 && y+1>=0)
+       				if(x+1>=0 && x+1<horizontal && y+1<vertical && y+1>=0)
        					nminas=nminas+tablero [x+1][y+1];
-       				if(x>=0 && x<20 && y+1<20 && y+1>= 0)
+       				if(x>=0 && x<horizontal && y+1<vertical && y+1>= 0)
        					nminas=nminas+tablero [x][y+1];
        			}
        			else {
        				if(y==0){
-       					if(x+1>=0 && x+1<20 && y<20)
+       					if(x+1>=0 && x+1<horizontal && y<vertical)
        						nminas=nminas+tablero [x+1][y];
-       					if(x-1>=0 && x-1<20 && y<20)
+       					if(x-1>=0 && x-1<horizontal && y<vertical)
        						nminas=nminas+tablero [x-1][y];
-       					if(x-1>=0 && x-1<20 && y+1<20 && y+1>=0)
+       					if(x-1>=0 && x-1<horizontal && y+1<vertical && y+1>=0)
        						nminas=nminas+tablero [x-1][y+1];
-       					if(x>=0 && x<20 && y+1<20 && y+1>= 0)
+       					if(x>=0 && x<horizontal && y+1<vertical && y+1>= 0)
        						nminas=nminas+tablero [x][y+1];
-       					if(x+1>=0 && x+1<20 && y+1<20 && y+1>=0)
+       					if(x+1>=0 && x+1<horizontal && y+1<vertical && y+1>=0)
        						nminas=nminas+tablero [x+1][y+1];
        					
        				}
        				
        				else{
        				
-       					if(x-1>=0 && x-1<20 && y-1<20)
+       					if(x-1>=0 && x-1<horizontal && y-1<vertical)
        						nminas=nminas+tablero [x-1][y-1];
-       					if(x>=0 && x<20 && y-1<20)
+       					if(x>=0 && x<horizontal && y-1<vertical)
        						nminas=nminas+tablero [x][y-1];
-       					if(x+1>=0 && x+1<20 && y-1<20)
+       					if(x+1>=0 && x+1<horizontal && y-1<vertical)
        						nminas=nminas+tablero [x+1][y-1];
-       					if(x+1>=0 && x+1<20 && y<20)
+       					if(x+1>=0 && x+1<horizontal && y<vertical)
        						nminas=nminas+tablero [x+1][y];
-       					if(x-1>=0 && x-1<20 && y<20)
+       					if(x-1>=0 && x-1<horizontal && y<vertical)
        						nminas=nminas+tablero [x-1][y];
-       					if(x-1>=0 && x-1<20 && y+1<20 && y+1>=0)
+       					if(x-1>=0 && x-1<horizontal && y+1<vertical && y+1>=0)
        						nminas=nminas+tablero [x-1][y+1];
-       					if(x>=0 && x<20 && y+1<20 && y+1>= 0)
+       					if(x>=0 && x<horizontal && y+1<vertical && y+1>= 0)
        						nminas=nminas+tablero [x][y+1];
-       					if(x+1>=0 && x+1<20 && y+1<20 && y+1>=0)
+       					if(x+1>=0 && x+1<horizontal && y+1<vertical && y+1>=0)
        						nminas=nminas+tablero [x+1][y+1];
        					}
        			 }

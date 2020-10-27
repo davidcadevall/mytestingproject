@@ -7,10 +7,13 @@ import org.junit.Test;
 public class BuscaminasTest {
 
 	@Test
-	public void testCreaTablero() {
+	public void testcoorvalidas() {
 		
 		
-		int tablero [][]=Buscaminas.creaTablero(3, 3);
+		Buscaminas SC = new Buscaminas();
+		//PRUEBA DIAS 
+		boolean res1=SC.coorvalidas(3,3,3,3);
+		assertEquals(res1,true);
 		
 	}
 
