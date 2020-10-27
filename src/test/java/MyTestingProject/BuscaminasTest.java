@@ -7,8 +7,11 @@ import org.junit.Test;
 public class BuscaminasTest {
 
 	@Test
-	public void testMain() {
-		fail("Not yet implemented");
+	public void testCreaTablero() {
+		
+		
+		int tablero [][]=Buscaminas.creaTablero(3, 3);
+		
 	}
 
 }
