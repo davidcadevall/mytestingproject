@@ -4,10 +4,15 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class BuscaminasTest {
+public class TableroTest {
 
 	@Test
-	public void testMain() {
+	public void testTablero() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetTablero() {
 		fail("Not yet implemented");
 	}
 
