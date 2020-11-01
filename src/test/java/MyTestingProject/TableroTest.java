@@ -10,11 +10,11 @@ public class TableroTest {
 	@Test
 	public void testTablero() {
 		
-		//Probando máximos 
+		//Probando maximos 
 		Tablero t = new Tablero(MAX_VALUE,5);
 	    t = new Tablero(5,MAX_VALUE);
 	    t= new Tablero(99,99);
-	    //Probando mínimos 
+	    //Probando minimos 
 	    t = new Tablero(0,3);
 	    t= new Tablero(-3,-3);
 	    t= new Tablero(-3,3);
