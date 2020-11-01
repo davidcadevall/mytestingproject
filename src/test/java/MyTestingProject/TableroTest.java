@@ -29,7 +29,6 @@ public class TableroTest {
 	public void testGetHorizontal() {
 		
 		
-		
 		Tablero t = new Tablero(4,5);
 		int res_o=t.getHorizontal();
 		assertEquals(res_o,4);
