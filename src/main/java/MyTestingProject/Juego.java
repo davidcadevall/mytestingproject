@@ -5,9 +5,7 @@ public class Juego {
 	int tminas=10;
 	public Juego() {}
 
-	public void jugar(Tablero tablero2, int x,int y) {
-		int horizontal=8;
-		int vertical=8;
+	public void jugar(Tablero tablero2, int x,int y,int horizontal,int vertical) {
 		int nminas=0;
 		int tablero[][]=tablero2.getTablero();
    		if(tablero[x][y]==0){
