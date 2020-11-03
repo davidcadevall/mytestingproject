@@ -14,7 +14,7 @@ public class Tablero {
 	}
 	
 	int size_array =horizontal*vertical;
-	if(size_array>=999*999|| size_array <=9) {
+	if(size_array>=99*99|| size_array <=9) {
 		
 		created=false;
 	    System.out.println("Tamaño invalido de tablero");

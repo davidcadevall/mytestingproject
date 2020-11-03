@@ -9,6 +9,7 @@ public class TableroTest {
 
 	@Test
 	public void testTablero() {
+		//Assert de created 
 		
 		//Probando maximos 
 		Tablero t = new Tablero(MAX_VALUE,5);
@@ -40,6 +41,7 @@ public class TableroTest {
 		int res_o=t.getVertical();
 		assertEquals(res_o,5);
 	}
+	//Se puede unificar con el primer test 
 	@Test
 	public void testGetCreated() {
 		Tablero t = new Tablero(3,5);
@@ -50,4 +52,6 @@ public class TableroTest {
 		assertEquals(res_o,false);
 	}
 
+	
+	//Añadir también el test de "getTablero"
 }
