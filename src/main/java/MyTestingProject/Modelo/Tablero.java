@@ -1,4 +1,4 @@
-package MyTestingProject;
+package MyTestingProject.Modelo;
 
 public class Tablero {
 	int tablero[][];

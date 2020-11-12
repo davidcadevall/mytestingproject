@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import MyTestingProject.Modelo.Tablero;
+
 public class TableroTest {
 	public static final int   MAX_VALUE = 0x7fffffff;
 
@@ -54,4 +56,7 @@ public class TableroTest {
 
 	
 	//Añadir también el test de "getTablero"
+	
+	//Hasta que el q user no pasa los valores borrar el test vacio 
+	
 }

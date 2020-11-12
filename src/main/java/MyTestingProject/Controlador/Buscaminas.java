@@ -1,11 +1,10 @@
-package MyTestingProject;
+package MyTestingProject.Controlador;
 
 import java.util.Scanner;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import MyTestingProject.Modelo.Juego;
+import MyTestingProject.Modelo.Tablero;
 
-import java.util.*;
 
 public class Buscaminas{
 	
