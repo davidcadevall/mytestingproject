@@ -4,20 +4,28 @@ import java.util.Scanner;
 
 import MyTestingProject.Modelo.Juego;
 import MyTestingProject.Modelo.Tablero;
-
+import MyTestingProject.Vista.vistaI;
+import MyTestingProject.Vista.vista;
 
 public class Buscaminas{
+	public static Tablero tablero;
+	public static vistaI vista;
+	public Buscaminas(vistaI view) {
+		vista=view;
+	}
+	public Tablero getTablero() {return tablero;}
 	
 	public static void main(String[] args){
 		try (Scanner leer = new Scanner (System.in)) {
 			int horizontal;
 			int vertical;
 			Tablero t= new Tablero();
+			if(vista==null) {
+				vista=new vista();
+			}
 			do {
-				System.out.println("  Ingresa tamaño tablero horizontal, valor máximo 999, valor mínimo 3");
-				horizontal=leer.nextInt();
-			  	System.out.println("  Ingresa tamaño tablero vertical, valor máximo 999,valor mínimo 3");
-				vertical=leer.nextInt();
+				horizontal=vista.getHorizontal();
+				vertical=vista.getVertical();
 				t= new Tablero(horizontal,vertical,true);
 				
 			}while(t.getCreated()==false);
@@ -68,4 +76,6 @@ public class Buscaminas{
 	
 	
 	
+	
+
 }

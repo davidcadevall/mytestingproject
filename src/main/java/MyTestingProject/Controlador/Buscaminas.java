@@ -4,21 +4,29 @@ import java.util.Scanner;
 
 import MyTestingProject.Modelo.Juego;
 import MyTestingProject.Modelo.Tablero;
-
+import MyTestingProject.Vista.vistaI;
+import MyTestingProject.Vista.vista;
 
 public class Buscaminas{
+	public static Tablero t;
+	public static vistaI vista;
+	public Buscaminas(vistaI view) {
+		vista=view;
+	}
+	public Tablero getTablero() {return t;}
 	
 	public static void main(String[] args){
 		try (Scanner leer = new Scanner (System.in)) {
 			int horizontal;
 			int vertical;
-			Tablero t= new Tablero();
+		
+			if(vista==null)
+				vista=new vista();
+			
 			do {
-				System.out.println("  Ingresa tamaño tablero horizontal, valor máximo 999, valor mínimo 3");
-				horizontal=leer.nextInt();
-			  	System.out.println("  Ingresa tamaño tablero vertical, valor máximo 999,valor mínimo 3");
-				vertical=leer.nextInt();
-				t= new Tablero(horizontal,vertical);
+				horizontal=vista.getHorizontal();
+				vertical=vista.getVertical();
+				t= new Tablero(horizontal,vertical,vista.getAleatorio());
 				
 			}while(t.getCreated()==false);
 			
@@ -33,11 +41,9 @@ public class Buscaminas{
 			   		do{
 			   			 System.out.println("\n-x----------------------------------------------------x-");
 			   			 System.out.println("\n	Intento :"+juego.getIntento()+" , Cual es su coordenada? \n");
-			   			 System.out.print("		Fila:  ");
-			   			 x=leer.nextInt();
+			   			 x=vista.getPosX();
 			   			 System.out.println();
-			   			 System.out.print("		Columna:  ");
-			   			 y=leer.nextInt();
+			   			 y=vista.getPosY();
 			   			 
 			   			 if(x==0 || y==0 || x>horizontal || y>vertical)
 			   			 	System.out.println("\n	==>Coordenadas incorrectas<== \n");
@@ -68,4 +74,6 @@ public class Buscaminas{
 	
 	
 	
+	
+
 }

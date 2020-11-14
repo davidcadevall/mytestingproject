@@ -6,9 +6,9 @@ public class Tablero {
 	int vertical;
 	boolean created= true;
 	public static final int   MAX_VALUE = 0x7fffffff;
-	public Tablero() {}
-	public Tablero(int horizontal,int vertical) {
-	if(horizontal==MAX_VALUE||vertical==MAX_VALUE || horizontal<0||vertical<0) {
+
+	public Tablero(int horizontal,int vertical,boolean aleatorio) {
+	if(horizontal==MAX_VALUE||vertical==MAX_VALUE ) {
 		created=false;
 	    System.out.println("Tamaño invalido de tablero");
 	}
@@ -27,26 +27,37 @@ public class Tablero {
 		
 		double w=0;
 		double z=0;
-		
 		int ntminas=0;
 		
-		
-		
-		
+	
+		CasillaTablero cT = new Valor();
+	
 		for(int j=0;j<horizontal;j++)
 			for (int i=0;i<vertical;i++)
 				tablero [j][i]=0;
 		
 		do  {  
-	 			w=Math.random()*horizontal;
-	    		z=Math.random()*vertical;  
-	       		w=(int)w;
-	       		z=(int)z;
-	       		if  (z!=0 && w!=0 && z!=horizontal-1 && w!=vertical-1){
-	         	tablero[(int)w][(int) z ]=1;
-	          	ntminas++;
-	       			}
-	   		}while (ntminas<=10);
+				
+				if(aleatorio==true) {
+					
+					w=Math.random()*horizontal;
+		    		z=Math.random()*vertical;  
+		       		w=(int)w;
+		       		z=(int)z;
+		       		if  (z!=0 && w!=0 && z!=horizontal-1 && w!=vertical-1){
+		         	tablero[(int)w][(int) z ]=1;
+		          	ntminas++;
+		          	
+		       		}
+				}	
+				if(aleatorio==false) {
+					w= cT.getValor();
+					z= cT.getValor();
+					ntminas=10;
+					
+			    }
+       			
+	   		}while (ntminas<=9);
 	 
 	}
 
