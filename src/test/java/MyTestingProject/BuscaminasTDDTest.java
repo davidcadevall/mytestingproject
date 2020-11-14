@@ -1,4 +1,4 @@
-package MyTestingProject.Controlador;
+package MyTestingProject;
 
 import static org.junit.jupiter.api.Assertions.*;
 

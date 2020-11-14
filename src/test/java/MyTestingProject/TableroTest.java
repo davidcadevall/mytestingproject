@@ -18,15 +18,18 @@ public class TableroTest {
 		//Probando maximos 
 		Tablero t = new Tablero(MAX_VALUE,5,true,1);
 	    t = new Tablero(5,MAX_VALUE,true,1);
-	    t= new Tablero(99,99,true,1);
+	    t= new Tablero(99,99,true,10);
 	    //Probando minimos 
 	    t = new Tablero(0,3,true,10);
-	    t= new Tablero(-3,-3,true,10);
-	    t= new Tablero(-3,3,true,10);
-	    t= new Tablero(3,-3,true,10);
-	
 	    
-		
+	    t= new Tablero(-3,-3,true,10);
+	    
+	    t= new Tablero(-3,3,true,10);
+	    
+	    t= new Tablero(3,-3,true,10);    
+	    
+	  //Probando correctos 
+	    t= new Tablero(5,5,true,10);   
 	}
 
 

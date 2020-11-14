@@ -2,7 +2,7 @@ package MyTestingProject.Modelo;
 
 public class Juego {
 	int intento=40;
-	int tminas;
+	int tminas=10;
 	public Juego() {}
 
 	public void jugar(Tablero tablero2, int x,int y,int horizontal,int vertical) {
