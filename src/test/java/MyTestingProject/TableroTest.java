@@ -45,7 +45,6 @@ public class TableroTest {
 		int res_o=t.getVertical();
 		assertEquals(res_o,6);
 	}
-	//Se puede unificar con el primer test 
 	@Test
 	public void testGetCreated() {
 		Tablero t = new Tablero(6,6,true);
@@ -57,8 +56,6 @@ public class TableroTest {
 	}
 
 	
-	//Añadir también el test de "getTablero"
-	
-	//Hasta que el q user no pasa los valores borrar el test vacio 
+
 	
 }

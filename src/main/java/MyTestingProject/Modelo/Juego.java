@@ -65,7 +65,7 @@ public class Juego {
 	   		else
 	   			{
 	   				tminas = tminas-1;
-	   				System.out.println("\n	Acertaste!, Mina Eliminada Restan "+tminas+" Minas");
+	   				System.out.println("\n	Acertaste!, Mina Eliminada te quedant "+tminas+" minas");
 	   				System.out.println("\n	Intentos restantes: "+(intento-1));
 	   			}
 	   	

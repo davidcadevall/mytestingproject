@@ -45,7 +45,7 @@ public class JuegoTest {
 		// CASO  3 3 
 		j2.jugar(t2, 3,3, 5, 5);
 		
-		////HASTA AQUÍ PARA CUBRIR LOS MÁXIMOS DE INTENTOS
+		////HASTA AQUI PARA CUBRIR LOS MAX DE INTENTOS
 		
 		
 		// CAMBIANDO LOS INTENTOS
