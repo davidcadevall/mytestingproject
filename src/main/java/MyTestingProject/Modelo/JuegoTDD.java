@@ -1,13 +1,13 @@
-package TDD.Modelo;
+package MyTestingProject.Modelo;
 
-import MyTestingProject.Modelo.Tablero;
 
-public class Juego {
+
+public class JuegoTDD {
 	int intento=40;
 	int tminas=10;
-	public Juego() {}
+	public JuegoTDD() {}
 
-	public void jugar(Tablero tablero2, int x,int y,int horizontal,int vertical) {
+	public void jugar(TableroTDD tablero2, int x,int y,int horizontal,int vertical) {
 		int nminas=0;
 		int tablero[][]=tablero2.getTablero();
 		
@@ -41,6 +41,9 @@ public class Juego {
 	}
 	public void setIntento(int intents) {
 		intento= intents;
+	}
+	public void setMinas(int minas) {
+		tminas=minas;
 	}
 	
 	

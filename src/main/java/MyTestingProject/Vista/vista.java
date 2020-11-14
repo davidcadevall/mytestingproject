@@ -40,6 +40,49 @@ public class vista implements vistaI{
 		// TODO Auto-generated method stub
 		return true;
 	}
+
+	@Override
+	public int getMinas() {
+		// TODO Auto-generated method stub
+		return 10;
+	}
+
+	@Override
+	public void setPosX(int x) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setposY(int y) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getIntentos() {
+		// TODO Auto-generated method stub
+		return 40;
+	}
+
+	@Override
+	public void setIntentos(int intentosx) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setVertical(int ver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setHorizontal(int hor) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 	
 	

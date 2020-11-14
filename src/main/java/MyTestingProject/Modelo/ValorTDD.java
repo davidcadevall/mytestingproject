@@ -1,6 +1,6 @@
-package TDD.Modelo;
+package MyTestingProject.Modelo;
 
-public class Valor  implements CasillaTablero{
+public class ValorTDD  implements CasillaTableroTDD{
 
 
 	@Override

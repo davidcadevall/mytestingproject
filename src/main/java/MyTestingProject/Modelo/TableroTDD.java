@@ -1,17 +1,15 @@
-package TDD.Modelo;
+package MyTestingProject.Modelo;
 
-import MyTestingProject.Modelo.CasillaTablero;
-import MyTestingProject.Modelo.Valor;
 
-public class Tablero {
+public class TableroTDD {
 	int tablero[][];
 	int horizontal;
 	int vertical;
 	boolean created= true;
 	public static final int   MAX_VALUE = 0x7fffffff;
 
-	public Tablero(int horizontal,int vertical,boolean aleatorio) {
-	if(horizontal==MAX_VALUE||vertical==MAX_VALUE ) {
+	public TableroTDD(int horizontal,int vertical,boolean aleatorio, int totalMinas) {
+	if(horizontal==MAX_VALUE||vertical==MAX_VALUE || horizontal<3|| vertical<3 ) {
 		created=false;
 	    System.out.println("Tamaño invalido de tablero");
 	}
@@ -29,7 +27,7 @@ public class Tablero {
 		tablero= new int[horizontal][vertical];
 		
 		int ntminas=0;
-		CasillaTablero cT = new Valor();
+		CasillaTableroTDD cT = new ValorTDD();
 		
 	
 		for(int j=0;j<horizontal;j++)
@@ -40,7 +38,7 @@ public class Tablero {
 				
 			ntminas=llenarTablero(aleatorio,ntminas,cT);
        			
-	   		}while (ntminas<=9);
+	   		}while (ntminas<=totalMinas);
 	 
 	}
 
@@ -60,7 +58,7 @@ public class Tablero {
 		return created;
 	}
 	
-	public int llenarTablero(boolean aleatorio,int ntminas,CasillaTablero cT) {
+	public int llenarTablero(boolean aleatorio,int ntminas,CasillaTableroTDD cT) {
 		
 		double w=0;
 		double z=0;
@@ -79,7 +77,8 @@ public class Tablero {
 		if(aleatorio==false) {
 			w= cT.getValor();
 			z= cT.getValor();
-			ntminas=10;
+			tablero[(int)w][(int) z ]=1;
+			ntminas=2;
 			
 	    }
 		return ntminas;

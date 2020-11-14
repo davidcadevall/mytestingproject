@@ -17,16 +17,16 @@ public class JuegoTest {
 	@Test
 	public void testJugar() {
 		Juego j = new Juego();
-		Tablero t = new Tablero(5,5,false);
+		Tablero t = new Tablero(5,5,false,1);
 		
 		j.jugar(t, 0, 3, 5, 5);
 		
 		//ALEATORIO 
 		Juego j2 = new Juego();
-		Tablero t2 = new Tablero(5,5,true);
+		Tablero t2 = new Tablero(5,5,true,10);
 		
 		// CASO 0 2
-		j2.jugar(t2, 0, 2, 5, 5);
+		//j2.jugar(t2, 0, 2, 5, 5,1);
 		
 		// CAMBIANDO LOS INTENTOS
 		j2.setIntento(4);
@@ -64,11 +64,5 @@ public class JuegoTest {
 		assertEquals(intentos,40);
 	}
 
-	@Test
-	public void testGetMinas() {
-		Juego j = new Juego();
-		int minas=j.getMinas();
-		assertEquals(minas,10);
-	}
 
 }

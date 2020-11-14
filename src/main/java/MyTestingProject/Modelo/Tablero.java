@@ -7,8 +7,8 @@ public class Tablero {
 	boolean created= true;
 	public static final int   MAX_VALUE = 0x7fffffff;
 
-	public Tablero(int horizontal,int vertical,boolean aleatorio) {
-	if(horizontal==MAX_VALUE||vertical==MAX_VALUE ) {
+	public Tablero(int horizontal,int vertical,boolean aleatorio, int totalMinas) {
+	if(horizontal==MAX_VALUE||vertical==MAX_VALUE || horizontal<3|| vertical<3 ) {
 		created=false;
 	    System.out.println("Tamaño invalido de tablero");
 	}
@@ -53,11 +53,12 @@ public class Tablero {
 				if(aleatorio==false) {
 					w= cT.getValor();
 					z= cT.getValor();
-					ntminas=10;
+					tablero[(int)w][(int) z ]=1;
+					ntminas=2;
 					
 			    }
        			
-	   		}while (ntminas<=9);
+	   		}while (ntminas<=totalMinas);
 	 
 	}
 

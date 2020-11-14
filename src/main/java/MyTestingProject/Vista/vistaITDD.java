@@ -1,5 +1,5 @@
 package MyTestingProject.Vista;
-public interface vistaI {
+public interface vistaITDD {
 
 	public int getHorizontal() ;
 
@@ -25,5 +25,4 @@ public interface vistaI {
     public void setVertical(int ver);
 	
 	public void setHorizontal(int hor);
-	
 }

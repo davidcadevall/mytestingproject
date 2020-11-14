@@ -2,12 +2,13 @@ package MyTestingProject.Modelo;
 
 public class Juego {
 	int intento=40;
-	int tminas=10;
+	int tminas;
 	public Juego() {}
 
 	public void jugar(Tablero tablero2, int x,int y,int horizontal,int vertical) {
 		int nminas=0;
 		int tablero[][]=tablero2.getTablero();
+		
 		
 		if(intento>0) {
 
@@ -77,10 +78,15 @@ public class Juego {
 	public int getIntento() {
 		return intento;
 	}
+
+	public void setIntento(int intents) {
+		intento= intents;
+	}
+	
 	public int getMinas() {
 		return tminas;
 	}
-	public void setIntento(int intents) {
-		intento= intents;
+	public void setMinas(int minas) {
+		tminas=minas;
 	}
 }
