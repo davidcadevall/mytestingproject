@@ -6,7 +6,7 @@ public class vista implements vistaI{
 	@Override
 	public int getHorizontal() {
 		int horizontal;
-		System.out.println("  Ingresa valor tablero horizontal, valor máximo 999, valor mínimo 3");
+		System.out.println("  Ingresa valor tablero horizontal, valor máximo 99, valor mínimo 3");
 		horizontal=leer.nextInt();
 		return horizontal;
 	}
@@ -14,7 +14,7 @@ public class vista implements vistaI{
 	@Override
 	public int getVertical() {
 		int vertical;
-		System.out.println("  Ingresa valor tablero vertical, valor máximo 999,valor mínimo 3");
+		System.out.println("  Ingresa valor tablero vertical, valor máximo 99,valor mínimo 3");
 		vertical=leer.nextInt();
 		return vertical;
 	}

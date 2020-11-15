@@ -6,10 +6,10 @@ public class TableroTDD {
 	int horizontal;
 	int vertical;
 	boolean created= true;
-	public static final int   MAX_VALUE = 0x7fffffff;
+
 
 	public TableroTDD(int horizontal,int vertical,boolean aleatorio, int totalMinas) {
-	if(horizontal==MAX_VALUE||vertical==MAX_VALUE || horizontal<3|| vertical<3 ) {
+	if(horizontal==99||vertical==99 || horizontal<3|| vertical<3 ) {
 		created=false;
 	    System.out.println("Tamaño invalido de tablero");
 	}
