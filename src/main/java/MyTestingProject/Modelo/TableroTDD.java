@@ -2,7 +2,7 @@ package MyTestingProject.Modelo;
 
 
 public class TableroTDD {
-	int tablero[][];
+	int tablero[][]=null;
 	int horizontal;
 	int vertical;
 	boolean created= true;
@@ -46,6 +46,7 @@ public class TableroTDD {
 	
 }	
 	public int [][] getTablero(){
+		
 		return tablero;
 	}
 	public int  getHorizontal(){
@@ -78,7 +79,19 @@ public class TableroTDD {
 			w= cT.getValor();
 			z= cT.getValor();
 			tablero[(int)w][(int) z ]=1;
-			ntminas=2;
+
+		
+			tablero[2][1]=1;
+			tablero[3][1]=1;
+			tablero[4][1]=1;
+			tablero[0][1]=1;
+			tablero[0][0]=1;
+			tablero[1][0]=1;
+			tablero[2][0]=1;
+			tablero[3][0]=1;
+			tablero[4][0]=1;
+			
+			ntminas=10+1;
 			
 	    }
 		return ntminas;

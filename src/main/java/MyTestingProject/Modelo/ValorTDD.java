@@ -8,7 +8,7 @@ public class ValorTDD  implements CasillaTableroTDD{
 		// TODO Auto-generated method stub
 		
 		
-		return 5;
+		return 4;
 	}
 
 }

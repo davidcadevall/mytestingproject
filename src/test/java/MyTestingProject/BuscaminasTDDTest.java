@@ -1,19 +1,19 @@
-package MyTestingProject.Controlador;
+package MyTestingProject;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import MyTestingProject.MockVistaTDD;
+import MyTestingProject.Controlador.BuscaminasTDD;
 import MyTestingProject.Modelo.JuegoTDD;
 import MyTestingProject.Modelo.TableroTDD;
 
-class BuscaminasTDDTest {
+public class BuscaminasTDDTest {
 
 
 
 	@Test
-	void testGetTablero() {
+	public void testGetTablero() {
 		System.out.println(" ---------------------------------------- ");
 		System.out.println(" INICIO TEST GET TABLERO TDD");
 		MockVistaTDD mcv=new MockVistaTDD();
@@ -26,7 +26,7 @@ class BuscaminasTDDTest {
 	}
 
 	@Test
-	void testMain() {
+	public void testMain() {
 		System.out.println(" ---------------------------------------- ");
 		System.out.println(" INICIO TEST MAIN TDD");
 		/// TEST GANAR PARTIDA
@@ -126,7 +126,7 @@ class BuscaminasTDDTest {
 	}
 
 	@Test
-	void testCompruebaGanador() {
+	public void testCompruebaGanador() {
 		System.out.println(" ---------------------------------------- ");
 		System.out.println(" INICIO TEST COMPRUEBA GANADOR TDD");
 	
@@ -171,7 +171,7 @@ class BuscaminasTDDTest {
 
 
 	@Test
-void testEmpezarJuego() {
+public void testEmpezarJuego() {
 		
 		System.out.println(" ---------------------------------------- ");
 		System.out.println(" INICIO TEST EMPEZAR JUEGO TDD");

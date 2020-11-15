@@ -40,7 +40,10 @@ public class JuegoTDD {
 		return tminas;
 	}
 	public void setIntento(int intents) {
+		if(intents>0 && intents<=30)
 		intento= intents;
+		else
+		intento=0;
 	}
 	public void setMinas(int minas) {
 		tminas=minas;

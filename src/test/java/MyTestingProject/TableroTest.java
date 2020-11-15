@@ -9,17 +9,21 @@ import org.junit.Test;
 import MyTestingProject.Modelo.Tablero;
 
 public class TableroTest {
-	public static final int   MAX_VALUE = 0x7fffffff;
+	
 
 	@Test
 	public void testTablero() {
 		//Assert de created 
 		
 		//Probando maximos 
-		Tablero t = new Tablero(MAX_VALUE,5,true,1);
-	    t = new Tablero(5,MAX_VALUE,true,1);
+		Tablero t = new Tablero(99,5,true,1);
+	    t = new Tablero(5,99,true,1);
 	    t= new Tablero(99,99,true,10);
+	    
 	    //Probando minimos 
+	    t = new Tablero(3,3,true,10);
+	    
+	    // Valores erroneos 
 	    t = new Tablero(0,3,true,10);
 	    
 	    t= new Tablero(-3,-3,true,10);

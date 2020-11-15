@@ -80,7 +80,10 @@ public class Juego {
 	}
 
 	public void setIntento(int intents) {
-		intento= intents;
+		if(intents>0 && intents<=40)
+			intento= intents;
+			else
+			intento=0;
 	}
 	
 	public int getMinas() {
