@@ -8,7 +8,7 @@ public class Valor  implements CasillaTablero{
 		// TODO Auto-generated method stub
 		
 		
-		return 2;
+		return 1;
 	}
 
 }

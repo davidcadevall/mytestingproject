@@ -54,16 +54,17 @@ public class Tablero {
 					w= cT.getValor();
 					z= cT.getValor();
 					tablero[(int)w][(int) z ]=1;
-					tablero[1][1]=1;
-					tablero[1][2]=1;
-					tablero[1][3]=1;
-					tablero[1][4]=1;
-					tablero[3][1]=1;
+
+				
 					tablero[2][1]=1;
-					tablero[2][2]=1;
-					tablero[2][3]=1;
-					tablero[2][4]=1;
-					tablero[3][4]=1;
+					tablero[3][1]=1;
+					tablero[4][1]=1;
+					tablero[0][1]=1;
+					tablero[0][0]=1;
+					tablero[1][0]=1;
+					tablero[2][0]=1;
+					tablero[3][0]=1;
+					tablero[4][0]=1;
 					
 					ntminas=10+1;
 					

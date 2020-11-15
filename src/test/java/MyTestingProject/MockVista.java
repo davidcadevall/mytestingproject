@@ -3,8 +3,8 @@ package MyTestingProject;
 import MyTestingProject.Vista.vistaI;
 
 public class MockVista implements vistaI{
-	int posx=3;
-	int posy=3;
+	int posx=2;
+	int posy=2;
 	int intentos=3;
 	int horizontal=9;
 	int vertical=9;

@@ -5,10 +5,10 @@ import java.util.Scanner;
 import MyTestingProject.Modelo.JuegoTDD;
 
 import MyTestingProject.Modelo.TableroTDD;
-
+import MyTestingProject.Vista.vistaI;
 import MyTestingProject.Vista.vistaITDD;
 import MyTestingProject.Vista.vistaTDD;
-
+import MyTestingProject.Vista.vista;
 
 public class BuscaminasTDD{
 	public static TableroTDD t;
@@ -84,11 +84,12 @@ public class BuscaminasTDD{
    			x=x-1;
    	   		y=y-1;
    			 
-   			 if(x<=0 || y<=0 || x>=horizontal || y>=vertical)
+   			 if(x<=0 || y<=0 || x>=horizontal || y>=vertical) {
+   				juego.setIntento(juego.getIntento()-1);
    			 	System.out.println("\n	==>Coordenadas incorrectas<== \n");
-   			 else
-   				 juego.jugar(t, x, y,horizontal,vertical);
-   		}while (x<=0 || y<=0 || x>horizontal || y>vertical&&juego.getIntento()>0);
+   			 }else {
+   				 juego.jugar(t, x, y,horizontal,vertical);}
+   		}while ((x<=0 || y<=0 || x>horizontal || y>vertical)&&juego.getIntento()>0);
    		
    	
    		

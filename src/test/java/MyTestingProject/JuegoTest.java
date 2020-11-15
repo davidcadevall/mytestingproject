@@ -21,14 +21,14 @@ public class JuegoTest {
 		
 		//NO ALEATORIO
 				System.out.print(" Test tiene que salir bomba");
-				j.jugar(t, 1, 1, 5, 5);
+				j.jugar(t, 0, 0, 5, 5);
 		
 	
-				System.out.print(" Test no tiene que salir bomba, 5 alrededor");
-				j.jugar(t, 3, 2, 5, 5);
+				System.out.print(" Test no tiene que salir bomba, 3 alrededor");
+				j.jugar(t, 2, 2, 5, 5);
 				
 				System.out.print(" Test no tiene que salir bomba, 0 alrededor");
-				j.jugar(t, 1, 5, 5, 5);
+				j.jugar(t, 1, 4, 5, 5);
 
 				//ALEATORIO 
 				Juego j2 = new Juego();
