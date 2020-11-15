@@ -61,13 +61,14 @@ public class BuscaminasTDD{
 	public static void compruebaGanador(JuegoTDD juego) {
 	  	if(juego.getMinas()==0)
 	   		System.out.println("		GANASTE!");
-	   	
-	   	if(juego.getMinas()>juego.getIntento())
-	   		System.out.println("		PERDISTE!    (Exceso de minas restantes "+juego.getMinas()+")\n\n");
-	   	
-	   	if(juego.getIntento()==0)
-	   		System.out.println("		PERDISTE!");
-		
+	  	else
+	  		if(juego.getIntento()==0)
+  				System.out.println("		PERDISTE!");
+	  			else
+	  				if(juego.getMinas()>juego.getIntento())
+	  		  			System.out.println("		PERDISTE!    (Exceso de minas restantes "+juego.getMinas()+")\n\n");
+	  		  	
+	  		
 	}
 	
 	
