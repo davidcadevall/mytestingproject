@@ -42,7 +42,7 @@ public class BuscaminasTest {
 		Buscaminas.main(argss);
 		System.out.println(" FIN TEST LOOP POSICION EQUIVOCADA 1 VEZ");
 		
-		/// TEST Loop simple posicion equivocada entra 2 veces condicionado por el número de intentos
+		/// TEST Loop simple posicion equivocada entra 2 veces condicionado por el numero de intentos
 		mcv.setIntentos(2);
 		mcv.setPosX(20);
 		mcv.setposY(20);
