@@ -1,9 +1,8 @@
 package MyTestingProject.Controlador;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import MyTestingProject.MockVistaTDD;
 import MyTestingProject.Modelo.JuegoTDD;
