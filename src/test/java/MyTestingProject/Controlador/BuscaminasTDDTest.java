@@ -1,17 +1,16 @@
-package MyTestingProject;
+package MyTestingProject.Controlador;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.*;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import MyTestingProject.Controlador.Buscaminas;
-import MyTestingProject.Controlador.BuscaminasTDD;
-import MyTestingProject.Modelo.Juego;
+import org.junit.jupiter.api.Test;
+
+import MyTestingProject.MockVistaTDD;
 import MyTestingProject.Modelo.JuegoTDD;
-import MyTestingProject.Modelo.Tablero;
 import MyTestingProject.Modelo.TableroTDD;
 
 class BuscaminasTDDTest {
+
 
 
 	@Test
@@ -171,8 +170,9 @@ class BuscaminasTDDTest {
 		
 	}
 
+
 	@Test
-	void testEmpezarJuego() {
+void testEmpezarJuego() {
 		
 		System.out.println(" ---------------------------------------- ");
 		System.out.println(" INICIO TEST EMPEZAR JUEGO TDD");
@@ -259,6 +259,4 @@ class BuscaminasTDDTest {
 				
 				
 	}
-
 }
-
