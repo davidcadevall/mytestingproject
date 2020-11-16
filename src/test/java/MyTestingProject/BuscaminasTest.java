@@ -34,6 +34,18 @@ public class BuscaminasTest {
 		
 		System.out.println(" FIN TEST PERDER PARTIDA");
 		
+		// TEST Loop simple posicion equivocada al estar condicionado por el numero de intentos 
+		//podemos forzar que sea 0, 1, n veces 
+		
+		
+		/// TEST Loop simple posicion equivocada entra 0 veces
+				mcv.setIntentos(0);
+				mcv.setPosX(-3);
+				mcv.setposY(-3);
+				juego=new Buscaminas(mcv);
+				Buscaminas.main(argss);
+				System.out.println(" FIN TEST LOOP POSICION EQUIVOCADA 0 VECES");
+		
 		/// TEST Loop simple posicion equivocada entra 1 vez
 		mcv.setIntentos(1);
 		mcv.setPosX(-3);
@@ -58,6 +70,9 @@ public class BuscaminasTest {
 		juego=new Buscaminas(mcv);
 		Buscaminas.main(argss);
 		System.out.println(" FIN TEST LOOP INTENTOS SUPERIORES 3 VECES");
+		
+		
+		// TEST Loop simple creacion tablero crea el tablero 1 vez o n veces 
 		
 		// TEST Loop simple creacion tablero 1 vez
 		mcv.setHorizontal(5);
