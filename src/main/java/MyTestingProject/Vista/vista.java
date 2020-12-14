@@ -38,7 +38,7 @@ public class vista implements vistaI{
 	@Override
 	public boolean getAleatorio() {
 		// TODO Auto-generated method stub
-		return true;
+		return false;
 	}
 
 	@Override

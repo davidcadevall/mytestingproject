@@ -27,7 +27,7 @@ public class Buscaminas{
 			do {
 				horizontal=vista.getHorizontal();
 				vertical=vista.getVertical();
-				t= new Tablero(horizontal,vertical,vista.getAleatorio(),vista.getMinas());
+				t= new Tablero(horizontal,vertical,false,vista.getMinas());
 				veces++;
 			}while(t.getCreated()==false && veces <3);
 			
