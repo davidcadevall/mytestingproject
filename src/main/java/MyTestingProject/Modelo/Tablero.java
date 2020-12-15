@@ -6,17 +6,17 @@ public class Tablero {
 	int vertical;
 	boolean created= true;
 
-	public Tablero(int horizontal,int vertical,boolean aleatorio, int totalMinas) {
+	public Tablero(int horizontal,int vertical, MyRandom myr, int totalMinas) {
 	if(horizontal==99||vertical==99 || horizontal<3|| vertical<3 ) {
 		created=false;
-	    System.out.println("Tamaño invalido de tablero");
+	    System.out.println("Tamaï¿½o invalido de tablero");
 	}
 	
 	int size_array =horizontal*vertical;
 	if(size_array>=99*99|| size_array <=9) {
 		
 		created=false;
-	    System.out.println("Tamaño invalido de tablero");
+	    System.out.println("Tamaï¿½o invalido de tablero");
 	}
 	if(created==true) {
 		this.horizontal=horizontal;
@@ -37,7 +37,7 @@ public class Tablero {
 		
 		do  {  
 				
-				if(aleatorio==true) {
+				if(myr.getRandom() == true) {
 					
 					w=Math.random()*horizontal;
 		    		z=Math.random()*vertical;  
@@ -49,7 +49,7 @@ public class Tablero {
 		          	
 		       		}
 				}	
-				if(aleatorio==false) {
+				if(myr.getRandom() == false) {
 					w= cT.getValor();
 					z= cT.getValor();
 					/*
@@ -78,7 +78,7 @@ public class Tablero {
 							TC_MiddleMine_01
 							TC_MiddleMine_02							
 					*/
-					/*
+					
 					//Open 0,0 with a mine on the right (Playing we should open the position 1,1)
 					tablero[0][1]=1;
 					
@@ -89,14 +89,14 @@ public class Tablero {
 					tablero[6][1]=1;
 					
 					//Open 7,7 with a mine on the left (Playing we should open the position 8,8)
-					tablero[7][7]=1;
+					tablero[7][6]=1;
 					
 					//Open 3,2 with 2 surrounding mines -> TC_MiddleMine_01
 					tablero[2][1]=1;					
 					tablero[2][2]=1;
 					
 					//Open 3,5 with 3 surrounding mines -> TC_MiddleMine_02
-					tablero[4][3]=1;
+					tablero[4][4]=1;
 					tablero[3][6]=1;
 					tablero[4][6]=1;
 					
@@ -104,14 +104,14 @@ public class Tablero {
 					tablero[7][3]=1;
 					
 					ntminas=11;
-					*/
+					
 					/*
 						This code simulates a mock object using the same concept as the programmers of the original code
 						We want to test opening the four corners with mines surrounding them in different positions
 						Game to test:
 							TC_MiddleMine_03							
 					*/
-					
+					/*
 					//Open 3,2 with 7 surrounding mines
 					tablero[2][1]=1;
 					tablero[2][2]=1;
@@ -126,7 +126,7 @@ public class Tablero {
 					tablero[7][4]=1;
 					tablero[7][5]=1;
 					ntminas=11;
-					
+					*/
 					/*
 					This code simulates a mock object using the same concept as the programmers of the original code
 					We want to test opening the four corners with mines surrounding them in different positions

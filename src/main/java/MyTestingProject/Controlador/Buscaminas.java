@@ -6,14 +6,23 @@ import MyTestingProject.Modelo.Juego;
 import MyTestingProject.Modelo.Tablero;
 import MyTestingProject.Vista.vistaI;
 import MyTestingProject.Vista.vista;
+import MyTestingProject.Modelo.MyRandom;
 
 public class Buscaminas{
 	public static Tablero t;
 	public static vistaI vista;
 	public static Juego juego;
+	private static MyRandom _myr;
+
 	public Buscaminas(vistaI view) {
 		vista=view;
 	}
+	
+	public Buscaminas(vistaI view, MyRandom myr) {
+		vista=view;
+		_myr = myr;
+	}
+	
 	public Tablero getTablero() {return t;}
 	
 	public static void main(String[] args){
@@ -24,10 +33,14 @@ public class Buscaminas{
 			if(vista==null)
 				vista=new vista();
 			
+			if(_myr == null) {
+				_myr = new MyRandom();
+			}
+			
 			do {
 				horizontal=vista.getHorizontal();
 				vertical=vista.getVertical();
-				t= new Tablero(horizontal,vertical,false,vista.getMinas());
+				t= new Tablero(horizontal, vertical, _myr, vista.getMinas());
 				veces++;
 			}while(t.getCreated()==false && veces <3);
 			

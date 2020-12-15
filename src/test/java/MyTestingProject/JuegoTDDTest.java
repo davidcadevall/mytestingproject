@@ -1,4 +1,6 @@
+/*
 package MyTestingProject;
+
 
 import static org.junit.Assert.*;
 
@@ -107,7 +109,7 @@ public class JuegoTDDTest {
 		
 		minas=j.getMinas();
 		assertEquals(minas,10);
-		// MINAS DESPUÉS DE JUGADA
+		// MINAS DESPUï¿½S DE JUGADA
 		
 		j.jugar(t2, 4, 4, 5, 5);
 		
@@ -170,3 +172,5 @@ public class JuegoTDDTest {
 	}
 
 }
+
+*/

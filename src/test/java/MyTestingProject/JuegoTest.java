@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import MyTestingProject.Modelo.Juego;
 import MyTestingProject.Modelo.Tablero;
-
+/*
 public class JuegoTest {
 
 	@Test
@@ -161,3 +161,4 @@ public class JuegoTest {
 		
 	}
 }
+*/
