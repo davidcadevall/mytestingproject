@@ -11,4 +11,8 @@ public class MyRandom {
 	public boolean getRandom() {
 		return this.random;
 	}
+	
+	public int[][] getMatrix(int c) {
+		return new int[][] {{0},{0}};
+	}
 }
